@@ -36,13 +36,13 @@
       <div class="header__content">
         <p>BAKE</p>
         <nav>
-          <ul>
+          <ul id="navbar">
             <li class="active"><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SERVICE</a></li>
-            <li><a href="#">GALLERY</a></li>
-            <li><a href="#">CLIENTS</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#intro">ABOUT</a></li>
+            <li><a href="#services">SERVICE</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#feedback">CLIENTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
       </div>
@@ -56,7 +56,7 @@
       </div>
     </section>
     <!-- INTRO -->
-    <section class="intro">
+    <section class="intro" id="intro">
       <div class="intro__item intro__text">
         <div>
           <h3>Tradition</h3>
@@ -138,7 +138,7 @@
       </div>
     </section>
     <!-- SERVICES -->
-    <section class="services">
+    <section class="services" id="services">
       <h2>OUR SERVICES</h2>
       <div class="services__content">
         <div class="services__item">
@@ -168,7 +168,7 @@
       </div>
     </section>
     <!-- GALLERY -->
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <h2>OUR GALLERY</h2>
       <div class="gallery__content">
         <figure class="gallery__item gallery__g1">
@@ -354,7 +354,7 @@
       </div>
     </section>
     <!-- CLIENT FEEDBACK -->
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <h2>TESTIMONIALS</h2>
       <div class="feedback__content">
         <div class="owl-carousel owl-theme">
@@ -379,7 +379,7 @@
       </div>
     </section>
     <!-- CONTACT -->
-    <section class="contact">
+    <section class="contact" id="contact">
       <h2>CONTACT</h2>
       <div class="contact__form">
       <form>
@@ -414,9 +414,77 @@
     </section>
     <!-- FOOTER -->
     <footer>
-      
+      <div class="footer__main">
+        <div class="footer__item">
+          <h3>About Us</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, natus illo. Consequatur maiores veniam est.
+          </p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, natus illo. Consequatur maiores veniam est.
+          </p>
+          <div class="footer__icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+        <div class="footer__item">
+          <h3>Working Time</h3>
+          <!-- <div class="footer__workingtime"> -->
+            <div class="footer__timetable">
+              <p>Monday</p>
+              <p>9h30 - 18h30</p>
+            </div>
+            <div class="footer__timetable">
+              <p>Tuesday</p>
+              <p>9h30 - 18h30</p>
+            </div>
+            <div class="footer__timetable">
+              <p>Wednesday</p>
+              <p>9h30 - 18h30</p>
+            </div>
+            <div class="footer__timetable">
+              <p>Thursday</p>
+              <p>9h30 - 18h30</p>
+            </div>
+            <div class="footer__timetable">
+              <p>Friday</p>
+              <p>9h30 - 18h30</p>
+            </div>
+            <div class="footer__timetable">
+              <p>Saturday</p>
+              <p>9h30 - 18h30</p>
+            </div>
+            <div class="footer__timetable">
+              <p>Sunday</p>
+              <p>9h30 - 18h30</p>
+            </div>
+          <!-- </div> -->
+        </div>
+        <div class="footer__item">
+          <h3>Twitter Us</h3> 
+          <p>ultricies nec, pellentesque eu, pretium quis</p>
+          <p>ultricies nec, pellentesque eu, pretium quis</p>
+          <p>ultricies nec, pellentesque eu, pretium quis</p>
+          <p>ultricies nec, pellentesque eu, pretium quis</p>
+        </div>
+        <div class="footer__item">
+          <h3>SUBSCRIBE US</h3>
+          <form>
+            <input type="email" placeholder="name@example.com" />
+            <button>Send</button>
+          </form>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione enim soluta at voluptate vitae quae omnis tempora, voluptas sint corrupti.</p>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>&copy;  2022 Lorem ipsum dolor sit amet. | Design by <span>Tran Hang</span></p>
+      </div>
     </footer>
-
+    <!-- Back to Top -->
+    <a href="#"class="backtoTop cd-top text-replace js-cd-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+   
     <!-- Jquery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- Waypoint Jquery -->
@@ -433,15 +501,31 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script>
       $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    autoplay: true,
-    responsive:{
-        0:{
-            items:1
+        loop:true,
+        margin:10,
+        autoplay: true,
+        responsive:{
+            0:{
+                items:1
+            }
         }
-    }
-})
+      })
+    </script>
+    <!-- Back to Top -->
+    <script src="./js/main_backToTop.js"></script>
+    <script src="./js/util.js"></script>
+
+    <!-- Navigation bar -->
+    <script>
+      var navbar = document.getElementById("navbar");
+      var listHeader = navbar.getElementsByTagName("li");
+      for (var i = 0; i < listHeader.length; i++) {
+        listHeader[i].addEventListener("click", () => {
+          var current = document.querySelector("#navbar .active");
+          current.className = current.className.replace("active", "");
+          this.className += "active"
+        })
+      }
     </script>
   </body>
 </html>

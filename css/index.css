@@ -8,6 +8,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -43,6 +44,9 @@ h2 {
 header {
     background-color: #4E2A84;
     padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 .header__content {
     width: 70%;
@@ -474,4 +478,107 @@ header {
 }
 .contact__info .fa.fa-phone {
     transform: rotateY(180deg);
+}
+.contact__info p {
+    margin: 10px 0;
+    font-size: 0.875rem;
+}
+/* FOOTER */
+footer {
+    background-color: black;
+    color: white;
+}
+.footer__main {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+.footer__main .footer__item {
+    width: 25%;
+    padding: 0 1.5rem;
+}
+.footer__main .footer__item h3 {
+    font-size: 1.25rem;
+    color: #ff0e83;
+    margin-bottom: 1.3rem;
+}
+.footer__main .footer__item p {
+    font-size: 0.875rem;
+    line-height: 2rem;
+    padding-bottom: 1rem;
+}
+.footer__item i {
+    width: 35px;
+    height: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    line-height: 35px;
+    margin: 5px 5px;
+    transition: all .5s;
+}
+.footer__item i:hover {
+    color: #ff0e83;
+    border-color: #ff0e83;
+}
+.footer__main .footer__item .footer__timetable {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted white;
+}
+.footer__main .footer__item .footer__timetable p {
+    padding: 0;
+    margin: 5px 0;
+}
+.footer__main .footer__item input {
+    padding: 10px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.footer__main .footer__item input:focus {
+    outline: none;
+    border-color:black ;
+    box-shadow: none;
+}
+.footer__main .footer__item button {
+    padding: 7px 16px;
+    color: black;
+    border-color: black;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+/* footer copyright */
+footer .footer__copyright {
+    text-align: center;
+    font-size: 0.875rem;
+    padding-bottom: 20px;
+}
+footer .footer__copyright span {
+    color: #ff0e83;
+}
+/* Back to Top */
+
+.backtoTop {
+    font-size: 2rem;
+    color: #ff0e83;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ff0e83;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    line-height: 37px;
+    text-align: center;
+    visibility: hidden;
+}
+.cd-top--is-visible { 
+    opacity: 0.6;
+    visibility: visible;
+    transition: all .5s;
+}
+.backtoTop:hover.cd-top--is-visible {
+    opacity: 1;
 }
