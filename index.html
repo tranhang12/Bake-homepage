@@ -520,11 +520,11 @@
       var navbar = document.getElementById("navbar");
       var listHeader = navbar.getElementsByTagName("li");
       for (var i = 0; i < listHeader.length; i++) {
-        listHeader[i].addEventListener("click", () => {
+        listHeader[i].addEventListener("click", function() {
           var current = document.querySelector("#navbar .active");
           current.className = current.className.replace("active", "");
-          this.className += "active"
-        })
+          this.className += "active";
+        });
       }
     </script>
   </body>
