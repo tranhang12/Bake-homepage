@@ -99,6 +99,13 @@ header {
     font-size: 1.1rem;
     padding: 23px;
 }
+/* .carousel__content button:hover {
+    transform: scale(1.1) translateY(-5px);
+} */
+.carousel__content button:hover {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: upDown infinite 0.5s 0s;
+}
 /* INTRO */
 .intro {
     display: grid;
@@ -581,4 +588,22 @@ footer .footer__copyright span {
 }
 .backtoTop:hover.cd-top--is-visible {
     opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes upDown {
+    /* from {
+        transform: translateY(-5px);
+    }
+    to {
+        transform: translateY(0);
+    } */
+
+    0%{}
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
